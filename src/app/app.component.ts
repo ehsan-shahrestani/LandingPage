@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
-declare interface RouteInfo {
-  path: string;
-  title: string;
 
+declare interface Itags {
+  icon: string,
+  text: string
 }
 
-export const ROUTES: RouteInfo[] = [
-  { path: '', title: '.Category' },
-  { path: '', title: '.Home' },
-  { path: '', title: '.Contact us ' },
-  { path: '', title: '.Faq' },
-];
+export const tags: Itags[] = [
+  { text: 'Fotball', icon: 'fa-futbol' },
+  { text: 'Covid-19', icon: 'fa-virus-covid' },
+  { text: 'Mask', icon: 'fa-mask-face' },
+  { text: 'Iran', icon: 'fa-trophy' },
+  { text: 'World', icon: 'fa-earth-americas' }
+]
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -21,8 +25,8 @@ export const ROUTES: RouteInfo[] = [
 
 export class AppComponent implements OnInit {
   title = 'landingpage';
-  menuItems!: any[]
+  tags: any
   ngOnInit(): void {
-    this.menuItems = ROUTES
+    this.tags = tags
   }
 }

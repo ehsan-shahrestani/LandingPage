@@ -1,16 +1,234 @@
 <header>
-  <nav class=" container ">
+  <app-navbar></app-navbar>
 
-    <div class="flex items-center mb-3">
-      <img class="w-7 h-7 mr-2" src="assets/icon/icons8-iran-48.png" alt="">
-
-      <p> En</p>
-    </div>
-    <hr>
-    <div class="flex mt-3 items-center">
-      <img class="w-16 h-16 mr-4" src="assets/icon/Stroke Offset Animation.svg" alt="">
-      <a *ngFor="let item of menuItems" class="mx-2" href="">{{item.title}}</a>
-
-    </div>
-  </nav>
 </header>
+
+
+<section class="mt-10 container">
+
+  <div class=" relative w-full">
+    <img class="rounded-2xl  w-full " height="100px" src="assets/backgrund/1.jpg" alt="" srcset="">
+    <div class=" right-0 left-0 bottom-1/2  absolute  text-center  m-auto  ">
+
+      <div class=" w-2/4 text-left m-auto ">
+        <h1 class=" text-black mb-2 text-2xl">The largest refrence for buying and selling photos</h1>
+        <p class="text-gray-400 mb-6  text-md ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia,</p>
+
+        <div
+          class=" shadow-xl    flex  h-16 bg-white rounded-t-xl lg:rounded-xl p-2 items-center  justify-between relative">
+          <label class="w-full">
+            <input autocomplete="off"
+              class=" w-full block  bg-transparent   text-gray-700   rounded-lg py-2 px-3  leading-tight focus:outline-none focus:bg-transparent "
+              id="grid-password" type="text">
+          </label>
+          <button class="bg-amber-300 h-full w-20 flex items-center justify-center rounded-lg">
+            <i class=" fa-xl fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <!-- tags -->
+        <div class="flex items-center mt-3">
+          <div *ngFor="let tag of tags"
+            class="text-xs mx-1 inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-200 text-gray-700 rounded-full">
+            <i class=" mx-1   fa-solid  {{tag.icon}}"></i>
+            {{tag.text}}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class=" absolute  right-0 left-0 -bottom-14 z-50 w-3/4    m-auto    ">
+      <div class="bg-gray-50 shadow-xl  rounded-xl    ">
+        <div class="grid grid-cols-3 h-full p-4">
+          <div class="border-r-2 mr-4">
+            <h1 class="text-xl">Link / Code </h1>
+            <input
+              class=" border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 shadow appearance-none border rounded w-5/6 mt-4 py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+              id="username" type="text" placeholder="Enter your Link / Code">
+          </div>
+          <div class="border-r-2 mr-4">
+            <h1 class="text-xl">Server </h1>
+            <div class="w-5/6  relative mt-4 inline-block text-left">
+              <div>
+                <button type="button"
+                  class="inline-flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                  id="menu-button" aria-expanded="true" aria-haspopup="true">
+                  Select a server
+                  <!-- Heroicon name: solid/chevron-down -->
+                  <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <h1>todo: code details</h1>
+            <div class="bg-green-600 rounded-lg h-full w-28 flex justify-center items-center">
+              <i class="fa-solid text-white fa-2x  fa-cloud-arrow-down"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="mt-28 container ">
+  <div class="flex justify-between items-center">
+    <div>
+      <h2 class="text-2xl text-black">Category Products</h2>
+      <p class="text-md text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-2x fa-circle-chevron-left mx-2"></i>
+      <i class="fa-solid fa-2x fa-circle-chevron-right"></i>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-8 gap-5 mt-10">
+    <div class="col-span-2 grid-rows-2 gap-5  grid  rounded-lg text-lg  ">
+      <div class="rounded-lg bg-red-100  text-center text-lg font-bold text-green-500 shadow-lg"><img
+          class="w-full rounded-lg" src="assets/imagesSeaction1/image1.jpg" alt=""></div>
+      <div class="rounded-lg bg-red-100  text-center text-lg font-bold text-green-500 shadow-lg"><img
+          class="w-full rounded-lg" src="assets/imagesSeaction1/image2.jpg" alt=""></div>
+    </div>
+
+    <div
+      style="background-image: url('assets/imagesSeaction1/image5.jpg'); background-repeat: no-repeat ; background-size: cover ;  "
+      class="col-span-3  rounded-lg bg-green-100   text-center text-lg font-bold text-green-500 shadow-lg"></div>
+    <div class="col-span-3 grid gap-5">
+      <div
+        style="background-image: url('assets/imagesSeaction1/image2.jpg'); background-repeat: no-repeat ; background-size: cover ;  "
+        class="rounded-lg bg-green-100 p-5 text-center text-lg font-bold text-green-500 shadow-lg"></div>
+      <div class="grid grid-cols-5 gap-4 rounded-lg text-center text-lg font-bold text-green-500">
+        <div
+          style="background-image: url('assets/imagesSeaction1/image4.jpg'); background-repeat: no-repeat ; background-size: cover ;  "
+          class="col-span-2 rounded-lg bg-red-100  text-center text-lg font-bold text-green-500 shadow-lg"></div>
+        <div
+          style="background-image: url('assets/imagesSeaction1/image1.jpg'); background-repeat: no-repeat ; background-size: cover ;  "
+          class="col-span-3 rounded-lg bg-red-100  text-center text-lg font-bold text-green-500 shadow-lg"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="mt-28 container ">
+  <div class="flex justify-between items-center">
+    <div>
+      <h2 class="text-2xl text-black">Category Products</h2>
+      <p class="text-md text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-2x fa-circle-chevron-left mx-2"></i>
+      <i class="fa-solid fa-2x fa-circle-chevron-right"></i>
+    </div>
+  </div>
+
+  <div class="flex mt-10">
+    <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div class="rounded p-4">
+        <img class="rounded-xl " src="assets/imagesSeaction1/image1.jpg" alt="" />
+      </div>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+            acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
+        <a href="#"
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class=" mx-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div class="rounded p-4">
+        <img class="rounded-xl " src="assets/imagesSeaction1/image1.jpg" alt="" />
+      </div>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+            acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
+        <a href="#"
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class=" mx-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div class="rounded p-4">
+        <img class="rounded-xl " src="assets/imagesSeaction1/image1.jpg" alt="" />
+      </div>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+            acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
+        <a href="#"
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div class="rounded p-4">
+        <img class="rounded-xl " src="assets/imagesSeaction1/image1.jpg" alt="" />
+      </div>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+            acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+          acquisitions of 2021 so far, in reverse chronological order.</p>
+        <a href="#"
+          class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>

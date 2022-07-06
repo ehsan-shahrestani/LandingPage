@@ -7,7 +7,7 @@ module.exports = {
         
             center: true,
            
-            padding: '1rem',
+            // padding: '1rem',
     
             screens: {
               sm: '600px',
